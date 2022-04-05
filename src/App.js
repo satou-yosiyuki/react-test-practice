@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import RenderInput from "./RenderInput";
 import FrameWorkList from "./FrameWorkList";
+import MockServer from "./MockServer";
 
 function App() {
   const output = (text) => {
@@ -18,6 +19,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <RenderInput outputConsole={output} />
         <FrameWorkList frameworks={data} />
+        <MockServer />
         <a
           className="App-link"
           href="https://reactjs.org"
