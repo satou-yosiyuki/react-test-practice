@@ -1,14 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import RenderInput from "./RenderInput";
+import FrameWorkList from "./FrameWorkList";
+import MockServer from "./MockServer";
 
 function App() {
+  const output = (text) => {
+    console.log(text);
+  };
+  const data = [
+    { id: 1, item: "React" },
+    { id: 2, item: "Vue" },
+    { id: 3, item: "Angular" },
+  ];
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <RenderInput outputConsole={output} />
+        <FrameWorkList frameworks={data} />
+        <MockServer />
         <a
           className="App-link"
           href="https://reactjs.org"
