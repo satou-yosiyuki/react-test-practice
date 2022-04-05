@@ -8,6 +8,17 @@ const Render = () => {
       <button>Click1</button>
       <button>Click2</button>
       <p>Udemy</p>
+      <span data-testid="
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      copyright">@React</span>
     </div>
   );
 };

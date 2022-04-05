@@ -7,7 +7,15 @@ describe("Rendering", () => {
     render(<Render />);
     // renderした値を表示
     // screen.debug();
-    screen.debug(screen.getByRole("heading"));
+    // screen.debug(screen.getByRole("heading"));
     expect(screen.getByRole("heading")).toBeTruthy();
+    expect(screen.getByRole("textbox")).toBeTruthy();
+    expect(screen.getAllByRole("button")[0]).toBeTruthy();
+    expect(screen.getAllByRole("button")[1]).toBeTruthy();
+    expect(screen.getByText("Udemy")).toBeTruthy();
+    // Udeeeemyがないことをテスト
+    expect(screen.queryByText("Udeeeemy")).toBeNull();
+    // idをテスト
+    expect(screen.getByTestId("copyright")).toBeTruthy();
   });
 });
